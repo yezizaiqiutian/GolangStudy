@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<h4>ai算命系统</h4>
+您的姓名<input id="name" type="text" value="">
+
+<button type="button" onclick="myFunction()">点击查看</button>
+
+<p id="test">请点击查看结果</p>
+
+</body>
+
+<script>
+
+    function myFunction() {
+        if (document.getElementById("name").value.trim() == "") {
+            document.getElementById("test").innerHTML = "请输入姓名"
+            return
+        }
+        ;
+        var type = Math.ceil(Math.random() * 10);
+        var text = ""
+        switch (type) {
+            case 0:
+                text = "你的印堂发黑，头顶隐约有黑气缭绕，近期可能会有血光之灾。"
+                break
+            case 1:
+                text = "您六亲缘薄;伤克子女;子嗣缘薄;命宫阴暗;岁运并临;命中有劫;流年大凶;冲克太岁;气数已尽……"
+                break
+            case 2:
+                text = "施主印堂发黑，近几日恐有血光之灾啊!若要趋吉避凶，请听我一言。"
+                break
+            case 3:
+                text = "功名应有份，尤须自厚培。"
+                break
+            case 4:
+                text = "命运需要自我改变，想说就说想做就做，否则会后悔的。"
+                break
+            case 5:
+                text = "时逢春回日，百花正及时。得人轻借力，便是运通时。"
+                break
+            case 6:
+                text = "福自天来，事不须求。年当大有为，富丽好时光。"
+                break
+            case 7:
+                text = "先生不是等闲人，龙跃于渊屈可伸，只是水浅遭虾戏，一朝飞腾上青云。"
+                break
+            case 8:
+                text = "环环财源如水，洋洋家计如春。片帆无恙，长江一夕遇春风。"
+                break
+            case 9:
+                text = "施主最近呈现大凶之兆，最好找处寺庙暂避为上"
+                break
+            case 10:
+                text = "命恨姻缘不到头，此生应有断弦忧，若能高山遇流水，好景佳人共白头。"
+                break
+        }
+
+        document.getElementById("test").innerHTML = text
+    }
+
+</script>
+
+</html>
